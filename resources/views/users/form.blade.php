@@ -28,7 +28,7 @@
                     <option value="2">Guest</option>
                 </select>
             </div>         
-            <button id="submitButton" class="btn btn-success">{{ request()->route('type') == 'add' ? 'Create' : 'Edit'}}</button>
+            <button id="submitButton" class="btn btn-success">{{ Request::route()->getName() == 'add_user' ? 'Create' : 'Edit'}}</button>
         </div>
     </div>
     <script>

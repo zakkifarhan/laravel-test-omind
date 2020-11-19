@@ -23,13 +23,13 @@ Route::get('/login', function () {
 
 Route::group(['prefix' => 'users'], function (){
     Route::view('/', 'users.index');
-    Route::view('/add', 'users.form');
+    Route::view('/add', 'users.form')->name('add_user');
     Route::view('/{id}/edit', 'users.form');
     Route::view('/{id}', 'users.detail');
 });
 
 Route::group(['prefix' => 'posts'], function (){
     Route::view('/', 'posts.index');
-    Route::view('/add', 'posts.form');
+    Route::view('/add', 'posts.form')->name('add_post');
     Route::view('/{id}/edit', 'posts.form');
 });
